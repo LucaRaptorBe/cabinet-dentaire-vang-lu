@@ -216,3 +216,18 @@ export const defaultViewport = {
   margin: "0px 0px -100px 0px", // Trigger slightly before element is fully visible
   amount: 0.3, // Trigger when 30% of element is visible
 };
+
+// Mobile-friendly viewport - triggers animations earlier
+export const mobileViewport = {
+  once: true,
+  margin: "0px 0px 0px 0px", // No margin, trigger when element enters viewport
+  amount: 0.1, // Trigger when only 10% is visible
+};
+
+// Utility function to get responsive viewport settings
+export const getResponsiveViewport = () => {
+  if (typeof window !== 'undefined') {
+    return window.innerWidth < 768 ? mobileViewport : defaultViewport;
+  }
+  return defaultViewport;
+};

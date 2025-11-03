@@ -26,6 +26,9 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+            <Link to="/" className="relative text-muted-foreground hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+              {t('navigation.home')}
+            </Link>
             <Link to="/a-propos" className="relative text-muted-foreground hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
               {t('navigation.about')}
             </Link>
@@ -73,6 +76,11 @@ const Navigation = () => {
                 animate="visible"
                 exit="hidden"
               >
+                <motion.div variants={staggerItem}>
+                  <Link to="/" onClick={() => setIsOpen(false)} className="relative block text-left text-muted-foreground hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
+                    {t('navigation.home')}
+                  </Link>
+                </motion.div>
                 <motion.div variants={staggerItem}>
                   <Link to="/a-propos" onClick={() => setIsOpen(false)} className="relative block text-left text-muted-foreground hover:text-primary transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full">
                     {t('navigation.about')}

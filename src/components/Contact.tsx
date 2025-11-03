@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, AlertCircle } from "lucide-react";
 import treatmentRoom from "@/assets/treatment-room.png";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn, defaultViewport, scaleOnHover, imageReveal, imageWithHoverZoom } from "@/lib/animations";
+import { fadeInUp, fadeIn, scaleOnHover, imageReveal, imageWithHoverZoom } from "@/lib/animations";
 import { useTranslation } from "react-i18next";
+import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
 
 const Contact = () => {
   const { t } = useTranslation('contact');
+  const viewport = useResponsiveViewport();
 
   return (
     <section id="contact" className="py-24 bg-secondary/30">
@@ -16,7 +18,7 @@ const Contact = () => {
           className="text-center mb-16"
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={viewport}
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -32,7 +34,7 @@ const Contact = () => {
             className="space-y-6"
             initial="hidden"
             whileInView="visible"
-            viewport={defaultViewport}
+            viewport={viewport}
             variants={fadeInUp}
             transition={{ delay: 0.2 }}
           >
@@ -128,7 +130,7 @@ const Contact = () => {
             className="relative"
             initial="hidden"
             whileInView="visible"
-            viewport={defaultViewport}
+            viewport={viewport}
             variants={imageReveal}
             transition={{ delay: 0.4 }}
           >

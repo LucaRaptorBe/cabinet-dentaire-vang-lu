@@ -2,16 +2,18 @@ import { useEffect } from "react";
 import { MapPin, Car, Bus, Calendar, Users, Languages, CheckCircle, Heart, Sparkles, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { pageTransition, fadeInUp, defaultViewport, fadeIn, imageWithSubtleOverlay } from "@/lib/animations";
+import { pageTransition, fadeInUp, fadeIn, imageWithSubtleOverlay } from "@/lib/animations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import dentistLimpertsberg from "@/assets/dentist-limpertsberg.png";
 import dentistPatient from "@/assets/dentist-patient.jpg";
 import { useTranslation } from "react-i18next";
+import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
 
 const About = () => {
   const { t } = useTranslation(['about', 'common']);
+  const viewport = useResponsiveViewport();
 
   useEffect(() => {
     // Scroll to top when component mounts
@@ -48,7 +50,7 @@ const About = () => {
                 className="relative order-2 lg:order-1"
                 initial="hidden"
                 whileInView="visible"
-                viewport={defaultViewport}
+                viewport={viewport}
                 variants={fadeIn}
               >
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -177,7 +179,7 @@ const About = () => {
                 className="relative"
                 initial="hidden"
                 whileInView="visible"
-                viewport={defaultViewport}
+                viewport={viewport}
                 variants={fadeIn}
                 transition={{ delay: 0.2 }}
               >

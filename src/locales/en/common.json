@@ -1,6 +1,7 @@
 {
   "siteName": "Vang Dental Practice",
   "navigation": {
+    "home": "Home",
     "about": "About",
     "services": "Services",
     "team": "Team",

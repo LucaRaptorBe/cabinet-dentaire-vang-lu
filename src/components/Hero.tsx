@@ -2,12 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock } from "lucide-react";
 import receptionImage from "@/assets/reception.png";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn, defaultViewport, scaleOnHover, imageReveal, imageWithHoverZoom } from "@/lib/animations";
+import { fadeInUp, fadeIn, scaleOnHover, imageReveal, imageWithHoverZoom } from "@/lib/animations";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
 
 const Hero = () => {
   const { t } = useTranslation('hero');
+  const viewport = useResponsiveViewport();
 
   return (
     <section id="hero" className="pt-20">
@@ -18,7 +20,7 @@ const Hero = () => {
               className="space-y-4"
               initial="hidden"
               whileInView="visible"
-              viewport={defaultViewport}
+              viewport={viewport}
               variants={fadeInUp}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
@@ -33,7 +35,7 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4"
               initial="hidden"
               whileInView="visible"
-              viewport={defaultViewport}
+              viewport={viewport}
               variants={fadeInUp}
               transition={{ delay: 0.2 }}
             >
@@ -68,7 +70,7 @@ const Hero = () => {
               className="grid sm:grid-cols-2 gap-6 pt-8"
               initial="hidden"
               whileInView="visible"
-              viewport={defaultViewport}
+              viewport={viewport}
               variants={fadeInUp}
               transition={{ delay: 0.3 }}
             >
@@ -93,7 +95,7 @@ const Hero = () => {
             className="relative"
             initial="hidden"
             whileInView="visible"
-            viewport={defaultViewport}
+            viewport={viewport}
             variants={imageReveal}
             transition={{ delay: 0.4 }}
           >

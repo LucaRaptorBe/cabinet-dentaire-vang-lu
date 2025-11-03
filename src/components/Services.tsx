@@ -1,14 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, ShieldCheck, Heart, Stethoscope, Baby, Drill, Users, Bone } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, staggerItem, defaultViewport } from "@/lib/animations";
+import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 import { useTranslation } from "react-i18next";
+import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
 
 const serviceIcons = [Sparkles, ShieldCheck, Heart, Stethoscope, Baby, Drill, Users, Bone];
 
 const Services = () => {
   const { t } = useTranslation('services');
   const services = t('items', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const viewport = useResponsiveViewport();
 
   return (
     <section id="services" className="py-24 bg-secondary/30">
@@ -17,7 +19,7 @@ const Services = () => {
           className="text-center mb-16"
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={viewport}
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -32,7 +34,7 @@ const Services = () => {
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={viewport}
           variants={staggerContainer}
         >
           {services.map((service, index) => {

@@ -23,6 +23,9 @@ const Index = () => {
           element.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
+    } else {
+      // Scroll to top if no hash is present
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 

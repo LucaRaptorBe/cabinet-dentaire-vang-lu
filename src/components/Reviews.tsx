@@ -1,11 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, staggerItem, defaultViewport } from "@/lib/animations";
+import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 import { useTranslation } from "react-i18next";
+import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
 
 const Reviews = () => {
   const { t } = useTranslation('reviews');
+  const viewport = useResponsiveViewport();
   const platforms = t('platforms', { returnObjects: true }) as Array<{
     name: string;
     rating: number;
@@ -82,7 +84,7 @@ const Reviews = () => {
           className="text-center mb-16"
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={viewport}
           variants={fadeInUp}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -98,7 +100,7 @@ const Reviews = () => {
           className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12"
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={viewport}
           variants={staggerContainer}
         >
           {platforms.map((platform, index) => (
@@ -133,7 +135,7 @@ const Reviews = () => {
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
           initial="hidden"
           whileInView="visible"
-          viewport={defaultViewport}
+          viewport={viewport}
           variants={staggerContainer}
         >
           {testimonials.map((testimonial, index) => (

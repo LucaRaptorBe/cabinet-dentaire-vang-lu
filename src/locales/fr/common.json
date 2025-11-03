@@ -1,6 +1,7 @@
 {
   "siteName": "Cabinet Dentaire Vang",
   "navigation": {
+    "home": "Accueil",
     "about": "À Propos",
     "services": "Services",
     "team": "Équipe",
