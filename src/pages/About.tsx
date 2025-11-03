@@ -10,25 +10,51 @@ import dentistLimpertsberg from "@/assets/dentist-limpertsberg.png";
 import dentistPatient from "@/assets/dentist-patient.jpg";
 import { useTranslation } from "react-i18next";
 import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const About = () => {
-  const { t } = useTranslation(['about', 'common']);
+  const { t, i18n } = useTranslation(['about', 'common']);
   const viewport = useResponsiveViewport();
+  const lang = i18n.language;
 
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  // Meta tags optimisés pour le SEO
+  const seoTitle =
+    lang === "fr"
+      ? "À Propos - Votre Bon Dentiste à Luxembourg | Cabinet Vang Limpertsberg"
+      : "About - Your Trusted Dentist in Luxembourg | Vang Dental Clinic";
+
+  const seoDescription =
+    lang === "fr"
+      ? "Découvrez le Cabinet Dentaire Vang, votre bon dentiste à Luxembourg. Équipe de 4 praticiens expérimentés, technologies modernes, approche personnalisée. Limpertsberg, accès facile."
+      : "Discover Vang Dental Clinic, your trusted dentist in Luxembourg. Team of 4 experienced practitioners, modern technology, personalized approach. Limpertsberg, easy access.";
+
+  const breadcrumbItems = [
+    { name: lang === "fr" ? "Accueil" : "Home", url: "https://cabinetdentairevang.lu/" },
+    { name: lang === "fr" ? "À Propos" : "About", url: "https://cabinetdentairevang.lu/a-propos" }
+  ];
+
   return (
-    <motion.div
-      className="min-h-screen bg-background"
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      variants={pageTransition}
-    >
-      <Navigation />
+    <>
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+        canonical="https://cabinetdentairevang.lu/a-propos"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <motion.div
+        className="min-h-screen bg-background"
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={pageTransition}
+      >
+        <Navigation />
       <main>
         {/* Hero Section + Le Cabinet Section */}
         <section className="pt-32 pb-24 bg-secondary/30">
@@ -58,6 +84,9 @@ const About = () => {
                     src={dentistLimpertsberg}
                     alt={t('cabinet.imageAlt')}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="800"
+                    height="600"
                     initial="rest"
                     whileHover="hover"
                     variants={imageWithSubtleOverlay}
@@ -188,6 +217,9 @@ const About = () => {
                     src={dentistPatient}
                     alt={t('approach.imageAlt')}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="800"
+                    height="600"
                     initial="rest"
                     whileHover="hover"
                     variants={imageWithSubtleOverlay}
@@ -272,6 +304,7 @@ const About = () => {
       </main>
       <Footer />
     </motion.div>
+    </>
   );
 };
 

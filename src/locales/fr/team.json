@@ -13,13 +13,15 @@
       "education": "ULB (Université Libre de Bruxelles)",
       "specialty": "Implantologie - DU Implantologie à l'ULB",
       "experience": "Ancienne assistante hospitalière-universitaire au service de stomatologie-dentisterie de l'Hôpital Erasme",
-      "languages": "Français, Anglais, Néerlandais"
+      "languages": "Français, Anglais, Néerlandais",
+      "imageAlt": "Dr. Aurélie Vang - Dentiste expérimentée Luxembourg spécialisée en implantologie"
     },
     {
       "name": "Dr. Aygul Baroche",
       "role": "Dentiste",
       "education": "Faculté d'Odontologie de Lorraine",
-      "languages": "Français, Turc, Russe, Anglais"
+      "languages": "Français, Turc, Russe, Anglais",
+      "imageAlt": "Dr. Aygul Baroche - Dentiste multilingue Luxembourg soins dentaires généraux"
     },
     {
       "name": "Dr. Aissata Konaté",
@@ -27,13 +29,15 @@
       "education": "ULB (Université Libre de Bruxelles)",
       "specialty": "Implantologie - DU Implantologie à l'AEIO",
       "experience": "Formation au cabinet parodontal sous la supervision du représentant belge de NYU",
-      "languages": "Français, Malien, Anglais"
+      "languages": "Français, Malien, Anglais",
+      "imageAlt": "Dr. Aissata Konaté - Dentiste Luxembourg spécialisée implantologie et parodontie"
     },
     {
       "name": "Dr. Alexane Febvey",
       "role": "Dentiste",
       "education": "CESPU (Portugal)",
-      "languages": "Français, Anglais, Espagnol, Portugais"
+      "languages": "Français, Anglais, Espagnol, Portugais",
+      "imageAlt": "Dr. Alexane Febvey - Dentiste Luxembourg multilingue prothèses et esthétique"
     }
   ]
 }

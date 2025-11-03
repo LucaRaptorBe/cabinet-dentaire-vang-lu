@@ -4,7 +4,8 @@ import { pageTransition } from "@/lib/animations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import DoctenaModal from "@/components/DoctenaModal";
-import { Helmet } from "react-helmet";
+import SEOHead from "@/components/SEOHead";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import aurelieVang from "@/assets/aurelie-vang.png";
@@ -19,7 +20,8 @@ interface Doctor {
 }
 
 const Booking = () => {
-  const { t } = useTranslation('booking');
+  const { t, i18n } = useTranslation('booking');
+  const lang = i18n.language;
   const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -59,15 +61,30 @@ const Booking = () => {
     setIsModalOpen(false);
   };
 
+  // Meta tags optimisés pour le SEO
+  const seoTitle =
+    lang === "fr"
+      ? "Prendre Rendez-vous - Dentiste Luxembourg | Cabinet Vang"
+      : "Book Appointment Online | Dentist Luxembourg - Vang Clinic";
+
+  const seoDescription =
+    lang === "fr"
+      ? "Prenez rendez-vous en ligne avec nos dentistes à Luxembourg Limpertsberg. Choix du praticien, horaires flexibles lun-ven 8h-18h. Nouveaux patients bienvenus. Réponse rapide garantie."
+      : "Book your appointment online with our dentists in Luxembourg Limpertsberg. Choose your practitioner, flexible hours Mon-Fri 8am-6pm. New patients welcome. Fast response guaranteed.";
+
+  const breadcrumbItems = [
+    { name: lang === "fr" ? "Accueil" : "Home", url: "https://cabinetdentairevang.lu/" },
+    { name: lang === "fr" ? "Rendez-vous" : "Booking", url: "https://cabinetdentairevang.lu/rendez-vous" }
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>{t('meta.title')}</title>
-        <meta
-          name="description"
-          content={t('meta.description')}
-        />
-      </Helmet>
+      <SEOHead
+        title={seoTitle}
+        description={seoDescription}
+        canonical="https://cabinetdentairevang.lu/rendez-vous"
+      />
+      <BreadcrumbSchema items={breadcrumbItems} />
 
       <motion.div
         className="min-h-screen bg-background"
@@ -112,6 +129,9 @@ const Booking = () => {
                           src={doctor.image}
                           alt={doctor.name}
                           className="w-full h-full object-cover"
+                          loading="lazy"
+                          width="300"
+                          height="300"
                         />
                       </div>
                       <CardContent className="p-4">

@@ -8,7 +8,6 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
-import SEOHead from "@/components/SEOHead";
 
 const queryClient = new QueryClient();
 
@@ -33,7 +32,6 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <SEOHead />
       <BrowserRouter>
         <AnimatedRoutes />
       </BrowserRouter>

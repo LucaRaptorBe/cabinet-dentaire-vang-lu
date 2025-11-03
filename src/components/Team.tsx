@@ -19,6 +19,7 @@ const Team = () => {
     specialty?: string;
     experience?: string;
     languages: string;
+    imageAlt: string;
   }>;
   const viewport = useResponsiveViewport();
 
@@ -53,8 +54,11 @@ const Team = () => {
                 <div className="aspect-square overflow-hidden bg-secondary">
                   <img
                     src={teamImages[index]}
-                    alt={member.name}
+                    alt={member.imageAlt}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="400"
                   />
                 </div>
                 <CardContent className="p-6 space-y-3">
