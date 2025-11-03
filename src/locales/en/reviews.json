@@ -1,0 +1,40 @@
+{
+  "title": "What Our Patients Say",
+  "subtitle": "We are proud of the trust our patients place in us",
+  "basedOn": "Based on",
+  "reviews": "reviews",
+  "platforms": [
+    {
+      "name": "Doctena",
+      "rating": 5,
+      "reviewCount": 737
+    },
+    {
+      "name": "Google",
+      "rating": 5,
+      "reviewCount": 14
+    }
+  ],
+  "testimonials": [
+    {
+      "text": "Superbe dentiste ! Très douce, à l'écoute et toujours de bon conseil. On se sent en confiance à chaque rendez-vous. Je recommande sans hésiter !",
+      "author": "Vayshnavi Sivarajah",
+      "platform": "Google"
+    },
+    {
+      "text": "Le cabinet Vang fait preuve d'un grand professionnalisme, avec un accueil chaleureux et des explications claires. Je recommande vivement.",
+      "author": "Kai",
+      "platform": "Google"
+    },
+    {
+      "text": "I have utmost confidence in Dr Vang's dentistry. I highly recommend her.",
+      "author": "Sally Woodward",
+      "platform": "Google"
+    },
+    {
+      "text": "Definitiv die beste Zahnärztin bei der ich jemals war. Professionell, Freundlich und super Service. Sehr zu empfehlen. Danke",
+      "author": "Arthur Hopestah",
+      "platform": "Google"
+    }
+  ]
+}

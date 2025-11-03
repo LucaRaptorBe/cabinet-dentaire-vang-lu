@@ -1,0 +1,13 @@
+{
+  "description": "Soins dentaires de qualité à Limpertsberg, Luxembourg",
+  "sections": {
+    "contact": "Contact",
+    "hours": "Horaires"
+  },
+  "hours": {
+    "weekdays": "Lun - Ven: 09:45 - 18:30",
+    "saturday": "Samedi: 09:45 - 14:00",
+    "sunday": "Dimanche: Fermé"
+  },
+  "copyright": "Cabinet Dentaire Vang. Tous droits réservés."
+}

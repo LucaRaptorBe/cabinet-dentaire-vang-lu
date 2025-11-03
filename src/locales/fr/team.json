@@ -1,0 +1,39 @@
+{
+  "title": "Notre Équipe",
+  "subtitle": "Des professionnels expérimentés à votre service",
+  "labels": {
+    "degree": "Diplôme:",
+    "specialty": "Spécialité:",
+    "languages": "Langues:"
+  },
+  "members": [
+    {
+      "name": "Dr. Aurélie Vang",
+      "role": "Dentiste",
+      "education": "ULB (Université Libre de Bruxelles)",
+      "specialty": "Implantologie - DU Implantologie à l'ULB",
+      "experience": "Ancienne assistante hospitalière-universitaire au service de stomatologie-dentisterie de l'Hôpital Erasme",
+      "languages": "Français, Anglais, Néerlandais"
+    },
+    {
+      "name": "Dr. Aygul Baroche",
+      "role": "Dentiste",
+      "education": "Faculté d'Odontologie de Lorraine",
+      "languages": "Français, Turc, Russe, Anglais"
+    },
+    {
+      "name": "Dr. Aissata Konaté",
+      "role": "Dentiste",
+      "education": "ULB (Université Libre de Bruxelles)",
+      "specialty": "Implantologie - DU Implantologie à l'AEIO",
+      "experience": "Formation au cabinet parodontal sous la supervision du représentant belge de NYU",
+      "languages": "Français, Malien, Anglais"
+    },
+    {
+      "name": "Dr. Alexane Febvey",
+      "role": "Dentiste",
+      "education": "CESPU (Portugal)",
+      "languages": "Français, Anglais, Espagnol, Portugais"
+    }
+  ]
+}

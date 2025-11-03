@@ -1,0 +1,19 @@
+{
+  "siteName": "Vang Dental Practice",
+  "navigation": {
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "contact": "Contact",
+    "call": "Call",
+    "bookAppointmentShort": "Book Now"
+  },
+  "buttons": {
+    "call": "Call",
+    "callNow": "Call Now",
+    "sendEmail": "Send Email",
+    "bookAppointment": "Book Appointment",
+    "ourServices": "Our Services",
+    "ourTeam": "Our Team"
+  }
+}

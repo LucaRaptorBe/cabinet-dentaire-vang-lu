@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "Our dental practice",
+    "subtitle": "YOUR WELL-BEING IS OUR PRIORITY, COMMITMENT, GOAL"
+  },
+  "cabinet": {
+    "title": "THE PRACTICE",
+    "stats": {
+      "since": "Since 2021",
+      "practitioners": "4 practitioners",
+      "multilingual": "Multilingual"
+    },
+    "points": [
+      "We are here to prove that a visit to the dentist does not have to be a stressful and painful experience.",
+      "Our multilingual practice offers a range of treatments from simple to complex.",
+      "Striving to provide quality treatment, Vang dental practice is constantly evolving.",
+      "Every patient is welcomed with the attention they deserve!"
+    ],
+    "imageAlt": "Limpertsberg dental practice"
+  },
+  "approach": {
+    "title": "OUR APPROACH",
+    "badges": {
+      "personalized": "Personalized listening",
+      "customPlans": "Tailored plans",
+      "empathetic": "Empathetic approach"
+    },
+    "points": [
+      "Your comfort and satisfaction are our top priorities.",
+      "Our approach is based on empathy and understanding.",
+      "We listen carefully to our patients' concerns.",
+      "We design personalized treatment plans that meet your unique needs."
+    ],
+    "cta": "Discover our services",
+    "imageAlt": "Dentist with patient"
+  },
+  "location": {
+    "title": "Our location",
+    "address": "19, AVENUE DE LA FAIENCERIE, L-1510 LIMPERTSBERG",
+    "car": {
+      "title": "Car",
+      "description": "By car? Perfect, the large Glacis parking lot is a two-minute walk from our dental practice in Limpertsberg."
+    },
+    "publicTransport": {
+      "title": "Public transport",
+      "description": "Easy access by bus and tram.",
+      "busStation": "Bus station 8 or 30:",
+      "busName": "Henri VII",
+      "tramStation": "Tram station:",
+      "tramName": "Faïencerie"
+    },
+    "mapTitle": "Vang dental practice location"
+  }
+}

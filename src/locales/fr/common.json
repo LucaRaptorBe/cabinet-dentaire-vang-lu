@@ -1,0 +1,19 @@
+{
+  "siteName": "Cabinet Dentaire Vang",
+  "navigation": {
+    "about": "À Propos",
+    "services": "Services",
+    "team": "Équipe",
+    "contact": "Contact",
+    "call": "Appeler",
+    "bookAppointmentShort": "Prendre RDV"
+  },
+  "buttons": {
+    "call": "Appeler",
+    "callNow": "Appeler Maintenant",
+    "sendEmail": "Envoyer un Email",
+    "bookAppointment": "Prendre Rendez-vous",
+    "ourServices": "Nos Services",
+    "ourTeam": "Notre équipe"
+  }
+}

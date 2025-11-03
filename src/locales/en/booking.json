@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "Book Appointment - Vang & Lu Dental Practice",
+    "description": "Book an appointment online with our dentists in Luxembourg. Easy and quick reservation via Doctena."
+  },
+  "hero": {
+    "title": "Book an appointment",
+    "subtitle": "Choose your practitioner and book online via Doctena"
+  },
+  "selectPractitioner": {
+    "title": "Select your practitioner"
+  },
+  "booking": {
+    "for": "Booking for",
+    "changePractitioner": "Change practitioner"
+  },
+  "callPreference": {
+    "title": "Prefer to call us?",
+    "description": "Our team is at your disposal to make an appointment by phone"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Our Team",
+  "subtitle": "Experienced professionals at your service",
+  "labels": {
+    "degree": "Degree:",
+    "specialty": "Specialty:",
+    "languages": "Languages:"
+  },
+  "members": [
+    {
+      "name": "Dr. Aurélie Vang",
+      "role": "Dentist",
+      "education": "ULB (Free University of Brussels)",
+      "specialty": "Implantology - Graduate Degree in Implantology at ULB",
+      "experience": "Former hospital-university assistant in the stomatology-dentistry department at Erasme Hospital",
+      "languages": "French, English, Dutch"
+    },
+    {
+      "name": "Dr. Aygul Baroche",
+      "role": "Dentist",
+      "education": "Faculty of Dentistry of Lorraine",
+      "languages": "French, Turkish, Russian, English"
+    },
+    {
+      "name": "Dr. Aissata Konaté",
+      "role": "Dentist",
+      "education": "ULB (Free University of Brussels)",
+      "specialty": "Implantology - Graduate Degree in Implantology at AEIO",
+      "experience": "Training at a periodontal practice under the supervision of the Belgian representative of NYU",
+      "languages": "French, Malian, English"
+    },
+    {
+      "name": "Dr. Alexane Febvey",
+      "role": "Dentist",
+      "education": "CESPU (Portugal)",
+      "languages": "French, English, Spanish, Portuguese"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "Notre cabinet dentaire",
+    "subtitle": "VOTRE BIEN-ÊTRE EST NOTRE PRIORITÉ, ENGAGEMENT, OBJECTIF"
+  },
+  "cabinet": {
+    "title": "LE CABINET",
+    "stats": {
+      "since": "Depuis 2021",
+      "practitioners": "4 praticiens",
+      "multilingual": "Multilingue"
+    },
+    "points": [
+      "Nous sommes là pour prouver qu'une visite chez le dentiste ne doit pas être une expérience stressante et douloureuse.",
+      "Notre cabinet multilingue propose un éventail de traitements faciles aux plus complexes.",
+      "S'efforçant d'offrir un traitement de qualité, le cabinet Vang évolue sans cesse.",
+      "Chaque patient est accueilli avec l'attention qu'il mérite!"
+    ],
+    "imageAlt": "Cabinet dentaire Limpertsberg"
+  },
+  "approach": {
+    "title": "NOTRE APPROCHE",
+    "badges": {
+      "personalized": "Écoute personnalisée",
+      "customPlans": "Plans sur mesure",
+      "empathetic": "Approche empathique"
+    },
+    "points": [
+      "Votre confort et satisfaction sont nos priorités absolues.",
+      "Notre approche est basée sur l'empathie et la compréhension.",
+      "Nous écoutons attentivement les préoccupations de nos patients.",
+      "Nous concevons des plans de traitement personnalisés qui répondent à vos besoins uniques."
+    ],
+    "cta": "Découvrir nos services",
+    "imageAlt": "Dentiste avec patient"
+  },
+  "location": {
+    "title": "Notre emplacement",
+    "address": "19, AVENUE DE LA FAIENCERIE, L-1510 LIMPERTSBERG",
+    "car": {
+      "title": "Voiture",
+      "description": "Voiture ? Parfait, le grand parking Glacis se trouve à deux minutes à pied de notre cabinet dentaire à Limpertsberg."
+    },
+    "publicTransport": {
+      "title": "Transport commun",
+      "description": "Accès facile grâce aux bus et au tram.",
+      "busStation": "Station bus 8 ou 30:",
+      "busName": "Henri VII",
+      "tramStation": "Station tram:",
+      "tramName": "Faïencerie"
+    },
+    "mapTitle": "Cabinet dentaire Vang location"
+  }
+}

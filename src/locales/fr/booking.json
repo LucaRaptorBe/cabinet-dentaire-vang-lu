@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "Prendre rendez-vous - Cabinet Dentaire Vang & Lu",
+    "description": "Prenez rendez-vous en ligne avec nos dentistes à Luxembourg. Réservation facile et rapide via Doctena."
+  },
+  "hero": {
+    "title": "Prendre rendez-vous",
+    "subtitle": "Choisissez votre praticien et réservez en ligne via Doctena"
+  },
+  "selectPractitioner": {
+    "title": "Sélectionnez votre praticien"
+  },
+  "booking": {
+    "for": "Réservation pour",
+    "changePractitioner": "Changer de praticien"
+  },
+  "callPreference": {
+    "title": "Vous préférez nous appeler ?",
+    "description": "Notre équipe est à votre disposition pour prendre rendez-vous par téléphone"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "description": "Quality dental care in Limpertsberg, Luxembourg",
+  "sections": {
+    "contact": "Contact",
+    "hours": "Hours"
+  },
+  "hours": {
+    "weekdays": "Mon - Fri: 09:45 AM - 6:30 PM",
+    "saturday": "Saturday: 09:45 AM - 2:00 PM",
+    "sunday": "Sunday: Closed"
+  },
+  "copyright": "Vang Dental Practice. All rights reserved."
+}

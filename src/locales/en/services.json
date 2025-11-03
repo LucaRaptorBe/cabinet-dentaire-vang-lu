@@ -1,0 +1,38 @@
+{
+  "title": "Our Services",
+  "subtitle": "Comprehensive dental care for the whole family",
+  "items": [
+    {
+      "title": "Scaling",
+      "description": "Professional scaling for a bright smile! Removal of stubborn tartar and plaque, with advice on maintaining oral hygiene."
+    },
+    {
+      "title": "Cavity Treatment",
+      "description": "Professional care to stop cavity progression and restore dental health using modern techniques."
+    },
+    {
+      "title": "Initial Periodontal Treatment",
+      "description": "Specialized treatment for gum disease to preserve oral health and prevent complications."
+    },
+    {
+      "title": "Implant Consultation",
+      "description": "Expert evaluation and advice for dental implants to replace missing teeth with functional solutions."
+    },
+    {
+      "title": "Pregnancy Check-up",
+      "description": "Specialized dental care adapted for pregnant women, ensuring the safety of maternal and fetal oral health."
+    },
+    {
+      "title": "Root Canal",
+      "description": "Advanced techniques to remove infected pulp, clean and seal teeth to prevent reinfection."
+    },
+    {
+      "title": "Adult and Child Check-ups",
+      "description": "Comprehensive examinations for all ages to prevent dental problems and maintain optimal oral health."
+    },
+    {
+      "title": "Wisdom Teeth",
+      "description": "Safe and painless extraction of wisdom teeth to eliminate discomfort and prevent future problems."
+    }
+  ]
+}
