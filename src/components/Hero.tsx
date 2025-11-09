@@ -77,14 +77,14 @@ const Hero = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-foreground">{t('address.street')}</p>
+                  <p className="text-sm text-muted-foreground">{t('address.street')}</p>
                   <p className="text-sm text-muted-foreground">{t('address.city')}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-medium text-foreground">{t('hours.weekdays')}</p>
+                  <p className="text-sm text-muted-foreground">{t('hours.weekdays')}</p>
                   <p className="text-sm text-muted-foreground">{t('hours.saturday')}</p>
                 </div>
               </div>

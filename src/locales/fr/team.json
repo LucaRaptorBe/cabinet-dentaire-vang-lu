@@ -2,41 +2,50 @@
   "title": "Notre Équipe",
   "subtitle": "Des professionnels expérimentés à votre service",
   "labels": {
-    "degree": "Diplôme:",
-    "specialty": "Spécialité:",
-    "languages": "Langues:"
+    "appointment": "RDV",
+    "viewMore": "Voir plus",
+    "experience": "EXPÉRIENCE",
+    "languages": "Langues"
   },
   "members": [
     {
       "name": "Dr. Aurélie Vang",
       "role": "Dentiste",
-      "education": "ULB (Université Libre de Bruxelles)",
-      "specialty": "Implantologie - DU Implantologie à l'ULB",
-      "experience": "Ancienne assistante hospitalière-universitaire au service de stomatologie-dentisterie de l'Hôpital Erasme",
-      "languages": "Français, Anglais, Néerlandais",
+      "experience": [
+        "Diplômée de l'ULB (Université Libre de Bruxelles)",
+        "DU Implantologie à l'ULB - (Pr. L. Evrard)",
+        "Anciennement assistante hospitalo-universitaire service stomatologie-dentisterie à l'hôpital Erasme (ULB)"
+      ],
+      "languageCodes": ["fr", "gb", "nl"],
       "imageAlt": "Dr. Aurélie Vang - Dentiste expérimentée Luxembourg spécialisée en implantologie"
     },
     {
       "name": "Dr. Aygul Baroche",
       "role": "Dentiste",
-      "education": "Faculté d'Odontologie de Lorraine",
-      "languages": "Français, Turc, Russe, Anglais",
+      "experience": [
+        "Diplômée de la faculté d'Odontologie de Lorraine"
+      ],
+      "languageCodes": ["fr", "tr", "ru", "gb"],
       "imageAlt": "Dr. Aygul Baroche - Dentiste multilingue Luxembourg soins dentaires généraux"
     },
     {
       "name": "Dr. Aissata Konaté",
       "role": "Dentiste",
-      "education": "ULB (Université Libre de Bruxelles)",
-      "specialty": "Implantologie - DU Implantologie à l'AEIO",
-      "experience": "Formation au cabinet parodontal sous la supervision du représentant belge de NYU",
-      "languages": "Français, Malien, Anglais",
+      "experience": [
+        "Diplômée de l'ULB (Université Libre de Bruxelles)",
+        "DU Implantologie à l'AEIO",
+        "Formation continue dans un cabinet parodontal sous la supervision du représentant Belge de la NYU"
+      ],
+      "languageCodes": ["fr", "ml", "gb"],
       "imageAlt": "Dr. Aissata Konaté - Dentiste Luxembourg spécialisée implantologie et parodontie"
     },
     {
       "name": "Dr. Alexane Febvey",
       "role": "Dentiste",
-      "education": "CESPU (Portugal)",
-      "languages": "Français, Anglais, Espagnol, Portugais",
+      "experience": [
+        "Diplômée du CESPU (Portugal)"
+      ],
+      "languageCodes": ["fr", "gb", "es", "pt"],
       "imageAlt": "Dr. Alexane Febvey - Dentiste Luxembourg multilingue prothèses et esthétique"
     }
   ]

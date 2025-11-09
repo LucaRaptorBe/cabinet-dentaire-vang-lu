@@ -1,11 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, ShieldCheck, Heart, Stethoscope, Baby, Drill, Users, Bone } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 import { useTranslation } from "react-i18next";
 import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
+import DetartrageIcon from "@/assets/services/detartrage.svg?react";
+import TraitementCarieIcon from "@/assets/services/traitement-de-carie.svg?react";
+import TraitementParodontalIcon from "@/assets/services/traitement-paradontal-initial.svg?react";
+import ImplantIcon from "@/assets/services/aivs-implant.svg?react";
+import GrossesseIcon from "@/assets/services/controle-de-grossesse.svg?react";
+import DevitalisationIcon from "@/assets/services/devitalisation.svg?react";
+import ControleIcon from "@/assets/services/controle-adultes-et-enfants.svg?react";
+import DentSagesseIcon from "@/assets/services/dent-de-sagesse.svg?react";
 
-const serviceIcons = [Sparkles, ShieldCheck, Heart, Stethoscope, Baby, Drill, Users, Bone];
+const serviceIcons = [DetartrageIcon, TraitementCarieIcon, TraitementParodontalIcon, ImplantIcon, GrossesseIcon, DevitalisationIcon, ControleIcon, DentSagesseIcon];
 
 const Services = () => {
   const { t } = useTranslation('services');
@@ -42,12 +49,14 @@ const Services = () => {
             return (
               <motion.div key={index} variants={staggerItem}>
                 <Card className="border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <IconComponent className="h-6 w-6 text-primary" />
+                  <CardContent className="p-4 flex gap-4">
+                    <div className="w-16 h-16 rounded-lg bg-primary/90 flex items-center justify-center flex-shrink-0">
+                      <IconComponent className="h-10 w-10 text-primary-foreground" />
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>

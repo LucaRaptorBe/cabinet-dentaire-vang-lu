@@ -16,7 +16,7 @@ const FAQSchema = () => {
         "name": "Où trouver un bon dentiste à Luxembourg Limpertsberg ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le Cabinet Dentaire Vang est situé au 19 Avenue de la Faïencerie, L-1510 Limpertsberg. Facilement accessible en transport en commun (tram Faïencerie, bus Henri VII) et à proximité du parking Glacis. Ouvert du lundi au vendredi de 9h45 à 18h30 et le samedi de 9h45 à 14h00."
+          "text": "Le Cabinet Dentaire Vang est situé au 19 Avenue de la Faïencerie, L-1510 Limpertsberg. Facilement accessible en transport en commun (tram Faïencerie, bus Henri VII) et à proximité du parking Glacis. Ouvert du lundi au vendredi de 9:45 à 18h30 et le samedi de 9:45 à 14h00."
         }
       },
       {
@@ -64,7 +64,7 @@ const FAQSchema = () => {
         "name": "Quels sont les horaires du Cabinet Dentaire Vang ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le Cabinet Dentaire Vang à Limpertsberg est ouvert du lundi au vendredi de 9h45 à 18h30 et le samedi de 9h45 à 14h00. Nous sommes fermés le dimanche. Prenez rendez-vous au +352 26 26 20 46 ou via notre site web pour choisir le créneau qui vous convient."
+          "text": "Le Cabinet Dentaire Vang à Limpertsberg est ouvert du lundi au vendredi de 9:45 à 18h30 et le samedi de 9:45 à 14h00. Nous sommes fermés le dimanche. Prenez rendez-vous au +352 26 26 20 46 ou via notre site web pour choisir le créneau qui vous convient."
         }
       }
     ]

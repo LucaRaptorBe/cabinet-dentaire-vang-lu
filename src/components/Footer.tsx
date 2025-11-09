@@ -27,9 +27,14 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">{t('sections.hours')}</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <p>{t('hours.weekdays')}</p>
-              <p>{t('hours.saturday')}</p>
-              <p>{t('hours.sunday')}</p>
+              <div className="grid grid-cols-[5rem_auto]">
+                <p>{t('hours.weekdays.days')}</p>
+                <p>{t('hours.weekdays.time')}</p>
+              </div>
+              <div className="grid grid-cols-[5rem_auto]">
+                <p>{t('hours.saturday.days')}</p>
+                <p>{t('hours.saturday.time')}</p>
+              </div>
             </div>
           </div>
         </div>

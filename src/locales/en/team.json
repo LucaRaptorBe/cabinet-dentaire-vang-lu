@@ -2,41 +2,50 @@
   "title": "Our Team",
   "subtitle": "Experienced professionals at your service",
   "labels": {
-    "degree": "Degree:",
-    "specialty": "Specialty:",
-    "languages": "Languages:"
+    "appointment": "Appointment",
+    "viewMore": "View more",
+    "experience": "EXPERIENCE",
+    "languages": "Languages"
   },
   "members": [
     {
       "name": "Dr. Aurélie Vang",
       "role": "Dentist",
-      "education": "ULB (Free University of Brussels)",
-      "specialty": "Implantology - Graduate Degree in Implantology at ULB",
-      "experience": "Former hospital-university assistant in the stomatology-dentistry department at Erasme Hospital",
-      "languages": "French, English, Dutch",
+      "experience": [
+        "Graduate of ULB (Free University of Brussels)",
+        "Graduate Degree in Implantology at ULB - (Prof. L. Evrard)",
+        "Former hospital-university assistant in the stomatology-dentistry department at Erasme Hospital (ULB)"
+      ],
+      "languageCodes": ["fr", "gb", "nl"],
       "imageAlt": "Dr. Aurélie Vang - Experienced dentist Luxembourg specialized in implantology"
     },
     {
       "name": "Dr. Aygul Baroche",
       "role": "Dentist",
-      "education": "Faculty of Dentistry of Lorraine",
-      "languages": "French, Turkish, Russian, English",
+      "experience": [
+        "Graduate of the Faculty of Dentistry of Lorraine"
+      ],
+      "languageCodes": ["fr", "tr", "ru", "gb"],
       "imageAlt": "Dr. Aygul Baroche - Multilingual dentist Luxembourg general dental care"
     },
     {
       "name": "Dr. Aissata Konaté",
       "role": "Dentist",
-      "education": "ULB (Free University of Brussels)",
-      "specialty": "Implantology - Graduate Degree in Implantology at AEIO",
-      "experience": "Training at a periodontal practice under the supervision of the Belgian representative of NYU",
-      "languages": "French, Malian, English",
+      "experience": [
+        "Graduate of ULB (Free University of Brussels)",
+        "Graduate Degree in Implantology at AEIO",
+        "Continuing education in a periodontal practice under the supervision of the Belgian representative of NYU"
+      ],
+      "languageCodes": ["fr", "ml", "gb"],
       "imageAlt": "Dr. Aissata Konaté - Dentist Luxembourg specialized in implantology and periodontics"
     },
     {
       "name": "Dr. Alexane Febvey",
       "role": "Dentist",
-      "education": "CESPU (Portugal)",
-      "languages": "French, English, Spanish, Portuguese",
+      "experience": [
+        "Graduate of CESPU (Portugal)"
+      ],
+      "languageCodes": ["fr", "gb", "es", "pt"],
       "imageAlt": "Dr. Alexane Febvey - Multilingual dentist Luxembourg prosthetics and aesthetics"
     }
   ]

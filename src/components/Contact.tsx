@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, AlertCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import treatmentRoom from "@/assets/treatment-room.png";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeIn, scaleOnHover, imageReveal, imageWithHoverZoom } from "@/lib/animations";
@@ -24,12 +24,9 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             {t('title')}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t('subtitle')}
-          </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <motion.div
             className="space-y-6"
             initial="hidden"
@@ -44,8 +41,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">{t('labels.phone')}</h3>
-                    <p className="text-muted-foreground mb-1">{t('phone.standard')}</p>
-                    <p className="text-muted-foreground">{t('phone.emergency')}</p>
+                    <p className="text-muted-foreground">{t('phone.standard')}</p>
                   </div>
                 </div>
 
@@ -75,23 +71,8 @@ const Contact = () => {
                     <div className="space-y-1 text-muted-foreground">
                       <p>{t('hours.weekdays')}</p>
                       <p>{t('hours.saturday')}</p>
-                      <p className="text-sm">{t('hours.sunday')}</p>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-accent bg-accent/10 border-2">
-              <CardContent className="p-6 flex items-start gap-4">
-                <AlertCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {t('welcomeMessage.title')}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t('welcomeMessage.description')}
-                  </p>
                 </div>
               </CardContent>
             </Card>

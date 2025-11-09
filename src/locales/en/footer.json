@@ -5,9 +5,14 @@
     "hours": "Hours"
   },
   "hours": {
-    "weekdays": "Mon - Fri: 09:45 AM - 6:30 PM",
-    "saturday": "Saturday: 09:45 AM - 2:00 PM",
-    "sunday": "Sunday: Closed"
+    "weekdays": {
+      "days": "Mon - Fri:",
+      "time": "09:45 AM - 6:30 PM"
+    },
+    "saturday": {
+      "days": "Saturday:",
+      "time": "09:45 AM - 2:00 PM"
+    }
   },
   "copyright": "Vang Dental Practice. All rights reserved."
 }

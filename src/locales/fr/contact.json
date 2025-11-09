@@ -1,6 +1,5 @@
 {
   "title": "Contactez-nous",
-  "subtitle": "Situé à 2 minutes à pied du Glacis",
   "labels": {
     "phone": "Téléphone",
     "email": "Email",
@@ -8,8 +7,7 @@
     "hours": "Horaires d'ouverture"
   },
   "phone": {
-    "standard": "Standard: +352 26 26 20 46",
-    "emergency": "Urgence: +352 621 961 991"
+    "standard": "+352 26 26 20 46"
   },
   "email": "dentiste1510@gmail.com",
   "address": {
@@ -17,13 +15,8 @@
     "city": "L-1510 Limpertsberg, Luxembourg"
   },
   "hours": {
-    "weekdays": "Lundi - Vendredi: 09:45 - 18:30",
-    "saturday": "Samedi: 09:45 - 14:00",
-    "sunday": "Dimanche: Fermé"
-  },
-  "welcomeMessage": {
-    "title": "Chaque patient est accueilli avec l'attention qu'il mérite",
-    "description": "Notre équipe met un point d'honneur à offrir des soins de qualité dans un environnement accueillant et professionnel."
+    "weekdays": "Lundi - Vendredi: 9h45 - 18h30",
+    "saturday": "Samedi: 9h45 - 14h00"
   },
   "imageAlt": "Salle de traitement moderne"
 }

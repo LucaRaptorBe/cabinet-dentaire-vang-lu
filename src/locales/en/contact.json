@@ -1,6 +1,5 @@
 {
   "title": "Contact Us",
-  "subtitle": "Located 2 minutes walk from Glacis",
   "labels": {
     "phone": "Phone",
     "email": "Email",
@@ -8,8 +7,7 @@
     "hours": "Opening Hours"
   },
   "phone": {
-    "standard": "Standard: +352 26 26 20 46",
-    "emergency": "Emergency: +352 621 961 991"
+    "standard": "+352 26 26 20 46"
   },
   "email": "dentiste1510@gmail.com",
   "address": {
@@ -18,12 +16,7 @@
   },
   "hours": {
     "weekdays": "Monday - Friday: 09:45 AM - 6:30 PM",
-    "saturday": "Saturday: 09:45 AM - 2:00 PM",
-    "sunday": "Sunday: Closed"
-  },
-  "welcomeMessage": {
-    "title": "Each patient is welcomed with the attention they deserve",
-    "description": "Our team is committed to providing quality care in a welcoming and professional environment."
+    "saturday": "Saturday: 09:45 AM - 2:00 PM"
   },
   "imageAlt": "Modern treatment room"
 }

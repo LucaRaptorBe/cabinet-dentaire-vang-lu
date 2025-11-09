@@ -5,9 +5,14 @@
     "hours": "Horaires"
   },
   "hours": {
-    "weekdays": "Lun - Ven: 09:45 - 18:30",
-    "saturday": "Samedi: 09:45 - 14:00",
-    "sunday": "Dimanche: Fermé"
+    "weekdays": {
+      "days": "Lun - Ven:",
+      "time": "9h45 - 18h30"
+    },
+    "saturday": {
+      "days": "Samedi:",
+      "time": "9h45 - 14h00"
+    }
   },
   "copyright": "Cabinet Dentaire Vang. Tous droits réservés."
 }
