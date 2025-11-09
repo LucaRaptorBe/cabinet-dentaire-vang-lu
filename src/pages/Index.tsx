@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 import { pageTransition } from "@/lib/animations";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import IntroSection from "@/components/IntroSection";
 import Services from "@/components/Services";
 import Reviews from "@/components/Reviews";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WaveDivider from "@/components/WaveDivider";
 import StructuredData from "@/components/StructuredData";
 import FAQSchema from "@/components/FAQSchema";
 import SEOHead from "@/components/SEOHead";
@@ -64,9 +66,16 @@ const Index = () => {
         <Navigation />
         <main>
           <Hero />
+          <WaveDivider topColor="bg-background" bottomColor="bg-secondary/30" />
+          <IntroSection />
+          <WaveDivider topColor="bg-background" bottomColor="bg-secondary/30" inverted={true} />
+          {/* <WaveDivider topColor="bg-background" bottomColor="bg-background" /> */}
           <Services />
+          {/* <WaveDivider topColor="bg-secondary/30" bottomColor="bg-background" /> */}
           <Reviews />
+          {/* <WaveDivider topColor="bg-background" bottomColor="bg-secondary/30" /> */}
           <Team />
+          {/* <WaveDivider topColor="bg-secondary/30" bottomColor="bg-background" /> */}
           <Contact />
         </main>
         <Footer />

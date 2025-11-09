@@ -2,20 +2,23 @@ import { useEffect } from "react";
 import { MapPin, Car, Bus, Calendar, Users, Languages, CheckCircle, Heart, Sparkles, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { pageTransition, fadeInUp, fadeIn, imageWithSubtleOverlay } from "@/lib/animations";
+import {
+  pageTransition,
+  sectionSlideLeft,
+  sectionSlideRight,
+  getResponsiveViewport
+} from "@/lib/animations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import dentistLimpertsberg from "@/assets/dentist-limpertsberg.png";
 import dentistPatient from "@/assets/dentist-patient.jpg";
 import { useTranslation } from "react-i18next";
-import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
 import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const About = () => {
   const { t, i18n } = useTranslation(['about', 'common']);
-  const viewport = useResponsiveViewport();
   const lang = i18n.language;
 
   useEffect(() => {
@@ -76,26 +79,29 @@ const About = () => {
                 className="relative order-2 lg:order-1"
                 initial="hidden"
                 whileInView="visible"
-                viewport={viewport}
-                variants={fadeIn}
+                viewport={getResponsiveViewport()}
+                variants={sectionSlideLeft}
               >
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                  <motion.img
+                  <img
                     src={dentistLimpertsberg}
                     alt={t('cabinet.imageAlt')}
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width="800"
                     height="600"
-                    initial="rest"
-                    whileHover="hover"
-                    variants={imageWithSubtleOverlay}
                   />
                 </div>
               </motion.div>
 
               {/* Text Right */}
-              <div className="space-y-6 order-1 lg:order-2">
+              <motion.div
+                className="space-y-6 order-1 lg:order-2"
+                initial="hidden"
+                whileInView="visible"
+                viewport={getResponsiveViewport()}
+                variants={sectionSlideRight}
+              >
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                   {t('cabinet.title')}
                 </h2>
@@ -149,7 +155,7 @@ const About = () => {
                     </Link>
                   </Button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -159,7 +165,13 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Text Left */}
-              <div className="space-y-6">
+              <motion.div
+                className="space-y-6"
+                initial="hidden"
+                whileInView="visible"
+                viewport={getResponsiveViewport()}
+                variants={sectionSlideLeft}
+              >
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                   {t('approach.title')}
                 </h2>
@@ -201,28 +213,24 @@ const About = () => {
                     </Link>
                   </Button>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Image Right */}
               <motion.div
                 className="relative"
                 initial="hidden"
                 whileInView="visible"
-                viewport={viewport}
-                variants={fadeIn}
-                transition={{ delay: 0.2 }}
+                viewport={getResponsiveViewport()}
+                variants={sectionSlideRight}
               >
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                  <motion.img
+                  <img
                     src={dentistPatient}
                     alt={t('approach.imageAlt')}
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width="800"
                     height="600"
-                    initial="rest"
-                    whileHover="hover"
-                    variants={imageWithSubtleOverlay}
                   />
                 </div>
               </motion.div>
@@ -235,7 +243,13 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Map Left */}
-              <div className="relative">
+              <motion.div
+                className="relative"
+                initial="hidden"
+                whileInView="visible"
+                viewport={getResponsiveViewport()}
+                variants={sectionSlideLeft}
+              >
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.2287654789!2d6.1247!3d49.6225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47954e7c4c7d5d0d%3A0x0!2s19%20Avenue%20de%20la%20Fa%C3%AFencerie%2C%201510%20Luxembourg!5e0!3m2!1sen!2slu!4v1234567890"
@@ -248,10 +262,16 @@ const About = () => {
                     title={t('location.mapTitle')}
                   ></iframe>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Location Info Right */}
-              <div className="space-y-8">
+              <motion.div
+                className="space-y-8"
+                initial="hidden"
+                whileInView="visible"
+                viewport={getResponsiveViewport()}
+                variants={sectionSlideRight}
+              >
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                     {t('location.title')}
@@ -297,7 +317,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

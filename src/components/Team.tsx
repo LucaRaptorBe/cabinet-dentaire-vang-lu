@@ -6,11 +6,11 @@ import aurelieVang from "@/assets/aurelie-vang.png";
 import aygulBaroche from "@/assets/aygul-baroche.png";
 import aissataKonate from "@/assets/aissata-konate.png";
 import alexaneFebvey from "@/assets/alexane-febvey.png";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 import { useTranslation } from "react-i18next";
 import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
-import { Calendar, ChevronRight } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 const teamImages = [aurelieVang, aygulBaroche, aissataKonate, alexaneFebvey];
 
@@ -36,7 +36,6 @@ const flagEmojis: Record<string, string> = {
 
 const Team = () => {
   const { t } = useTranslation('team');
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState<{ name: string; eid: string } | null>(null);
   const teamMembers = t('members', { returnObjects: true }) as Array<{
@@ -47,10 +46,6 @@ const Team = () => {
     imageAlt: string;
   }>;
   const viewport = useResponsiveViewport();
-
-  const toggleCard = (index: number) => {
-    setExpandedCard(expandedCard === index ? null : index);
-  };
 
   const handleAppointmentClick = (index: number, name: string) => {
     setSelectedDoctor({
@@ -65,7 +60,7 @@ const Team = () => {
   };
 
   return (
-    <section id="team" className="py-24">
+    <section id="team" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-16"
@@ -110,62 +105,39 @@ const Team = () => {
                     {member.name}
                   </h3>
 
-                  {/* RDV Icon and Text - Clickable */}
-                  <button
-                    onClick={() => handleAppointmentClick(index, member.name)}
-                    className="flex items-center gap-2 text-primary mb-4 hover:text-primary/80 transition-colors cursor-pointer"
-                  >
-                    <Calendar className="w-4 h-4" />
-                    <span className="text-sm font-medium">{t('labels.appointment')}</span>
-                  </button>
-
-                  {/* Voir Plus Button */}
+                  {/* RDV Button - Clickable */}
                   <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => toggleCard(index)}
-                    className="text-primary hover:text-primary/80 mb-4"
+                    onClick={() => handleAppointmentClick(index, member.name)}
+                    className="w-full mb-4"
+                    size="default"
                   >
-                    {t('labels.viewMore')}
-                    <ChevronRight className={`w-4 h-4 ml-1 transition-transform ${expandedCard === index ? 'rotate-90' : ''}`} />
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {t('labels.appointment')}
                   </Button>
 
-                  {/* Expandable Content */}
-                  <AnimatePresence>
-                    {expandedCard === index && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="w-full text-left overflow-hidden"
-                      >
-                        {/* Experience Section */}
-                        <div className="pt-4 border-t border-border">
-                          <h4 className="text-sm font-bold text-foreground mb-3">
-                            {t('labels.experience')}
-                          </h4>
-                          <ul className="space-y-2 mb-4">
-                            {member.experience.map((exp, expIndex) => (
-                              <li key={expIndex} className="text-xs text-muted-foreground flex">
-                                <span className="mr-2">•</span>
-                                <span>{exp}</span>
-                              </li>
-                            ))}
-                          </ul>
+                  {/* Experience Section - Always visible */}
+                  <div className="w-full text-left pt-4 border-t border-border">
+                    <h4 className="text-sm font-bold text-foreground mb-3">
+                      {t('labels.experience')}
+                    </h4>
+                    <ul className="space-y-2 mb-4">
+                      {member.experience.map((exp, expIndex) => (
+                        <li key={expIndex} className="text-sm text-muted-foreground flex">
+                          <span className="mr-2">•</span>
+                          <span>{exp}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-                          {/* Language Flags */}
-                          <div className="flex items-center gap-1 justify-center">
-                            {member.languageCodes.map((code, flagIndex) => (
-                              <span key={flagIndex} className="text-2xl">
-                                {flagEmojis[code]}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                    {/* Language Flags */}
+                    <div className="flex items-center gap-1 justify-center">
+                      {member.languageCodes.map((code, flagIndex) => (
+                        <span key={flagIndex} className="text-2xl">
+                          {flagEmojis[code]}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

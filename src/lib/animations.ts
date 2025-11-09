@@ -210,6 +210,72 @@ export const imageWithSubtleOverlay = {
   },
 };
 
+// Slide in from left for sections (subtle movement for About page)
+export const sectionSlideLeft: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -30,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Slide in from right for sections (subtle movement for About page)
+export const sectionSlideRight: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 30,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Slide in from left with delay (for creating staggered effects)
+export const sectionSlideLeftDelayed: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -30,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      delay: 0.2,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Slide in from right with delay (for creating staggered effects)
+export const sectionSlideRightDelayed: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 30,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      delay: 0.2,
+      ease: "easeOut",
+    },
+  },
+};
+
 // Default viewport settings for scroll animations
 export const defaultViewport = {
   once: true, // Animation happens only once for performance

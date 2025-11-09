@@ -6,10 +6,12 @@ import { fadeInUp, fadeIn, scaleOnHover, imageReveal, imageWithHoverZoom } from 
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useResponsiveViewport } from "@/hooks/useResponsiveViewport";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
 
 const Hero = () => {
   const { t } = useTranslation('hero');
   const viewport = useResponsiveViewport();
+  const scrollToSection = useScrollToSection();
 
   return (
     <section id="hero" className="pt-20">
@@ -58,10 +60,13 @@ const Hero = () => {
                 variants={scaleOnHover}
                 className="flex-1"
               >
-                <Button size="lg" variant="outline" asChild className="text-lg w-full">
-                  <a href="#services">
-                    {t('buttons.ourServices', { ns: 'common' })}
-                  </a>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg w-full"
+                  onClick={() => scrollToSection('services')}
+                >
+                  {t('buttons.ourServices', { ns: 'common' })}
                 </Button>
               </motion.div>
             </motion.div>

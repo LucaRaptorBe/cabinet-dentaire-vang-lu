@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const { t } = useTranslation(['footer', 'common']);
@@ -16,11 +17,22 @@ const Footer = () => {
 
           <div>
             <h4 className="font-semibold text-foreground mb-4">{t('sections.contact')}</h4>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <p>+352 26 26 20 46</p>
-              <p>dentiste1510@gmail.com</p>
-              <p>19 Avenue de la Faïencerie</p>
-              <p>L-1510 Limpertsberg</p>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-start gap-3">
+                <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">+352 26 26 20 46</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">dentiste1510@gmail.com</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <div className="text-muted-foreground">
+                  <p>19 Avenue de la Faïencerie</p>
+                  <p>L-1510 Limpertsberg</p>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 // Import translation files
 import commonFr from '../locales/fr/common.json';
 import heroFr from '../locales/fr/hero.json';
+import introFr from '../locales/fr/intro.json';
 import servicesFr from '../locales/fr/services.json';
 import teamFr from '../locales/fr/team.json';
 import contactFr from '../locales/fr/contact.json';
@@ -14,6 +15,7 @@ import reviewsFr from '../locales/fr/reviews.json';
 
 import commonEn from '../locales/en/common.json';
 import heroEn from '../locales/en/hero.json';
+import introEn from '../locales/en/intro.json';
 import servicesEn from '../locales/en/services.json';
 import teamEn from '../locales/en/team.json';
 import contactEn from '../locales/en/contact.json';
@@ -26,6 +28,7 @@ const resources = {
   fr: {
     common: commonFr,
     hero: heroFr,
+    intro: introFr,
     services: servicesFr,
     team: teamFr,
     contact: contactFr,
@@ -37,6 +40,7 @@ const resources = {
   en: {
     common: commonEn,
     hero: heroEn,
+    intro: introEn,
     services: servicesEn,
     team: teamEn,
     contact: contactEn,

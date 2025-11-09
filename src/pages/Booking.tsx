@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { pageTransition } from "@/lib/animations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -8,10 +8,34 @@ import SEOHead from "@/components/SEOHead";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
 import aurelieVang from "@/assets/aurelie-vang.png";
 import aygulBaroche from "@/assets/aygul-baroche.png";
 import aissataKonate from "@/assets/aissata-konate.png";
 import alexaneFebvey from "@/assets/alexane-febvey.png";
+
+const teamImages = [aurelieVang, aygulBaroche, aissataKonate, alexaneFebvey];
+
+// Doctena EID mapping for each doctor
+const doctorEIDs = [
+  "c6440d00-443c-4efa-bf0b-d9f58abaeecc", // Dr. Aurélie Vang
+  "605fe113-a72c-4863-b7dd-949df83a9162", // Dr. Aygul Baroche
+  "d03faefc-1cc3-431d-aeec-4a7249452ba2", // Dr. Aissata Konaté
+  "4fdabf8e-025d-4299-895c-94213ba54ab4", // Dr. Alexane Febvey
+];
+
+// Flag emoji mapping
+const flagEmojis: Record<string, string> = {
+  fr: "🇫🇷",
+  gb: "🇬🇧",
+  nl: "🇳🇱",
+  tr: "🇹🇷",
+  ru: "🇷🇺",
+  ml: "🇲🇱",
+  es: "🇪🇸",
+  pt: "🇵🇹",
+};
 
 interface Doctor {
   name: string;
@@ -20,40 +44,35 @@ interface Doctor {
 }
 
 const Booking = () => {
-  const { t, i18n } = useTranslation('booking');
+  const { t: tBooking, i18n } = useTranslation('booking');
+  const { t: tTeam } = useTranslation('team');
   const lang = i18n.language;
   const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [expandedDoctor, setExpandedDoctor] = useState<number | null>(null);
 
-  const doctors: Doctor[] = [
-    {
-      name: "Aurélie Vang",
-      eid: "c6440d00-443c-4efa-bf0b-d9f58abaeecc",
-      image: aurelieVang,
-    },
-    {
-      name: "Aygul Baroche",
-      eid: "605fe113-a72c-4863-b7dd-949df83a9162",
-      image: aygulBaroche,
-    },
-    {
-      name: "Aissata Konaté",
-      eid: "d03faefc-1cc3-431d-aeec-4a7249452ba2",
-      image: aissataKonate,
-    },
-    {
-      name: "Alexane Febvey",
-      eid: "4fdabf8e-025d-4299-895c-94213ba54ab4",
-      image: alexaneFebvey,
-    },
-  ];
+  const teamMembers = tTeam('members', { returnObjects: true }) as Array<{
+    name: string;
+    role: string;
+    experience: string[];
+    languageCodes: string[];
+    imageAlt: string;
+  }>;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const handleDoctorSelect = (doctor: Doctor) => {
-    setSelectedDoctor(doctor);
+  const toggleCard = (index: number) => {
+    setExpandedDoctor(expandedDoctor === index ? null : index);
+  };
+
+  const handleDoctorSelect = (index: number, name: string) => {
+    setSelectedDoctor({
+      name,
+      eid: doctorEIDs[index],
+      image: teamImages[index],
+    });
     setIsModalOpen(true);
   };
 
@@ -99,45 +118,99 @@ const Booking = () => {
             {/* Header Section */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
-                {t('hero.title')}
+                {tBooking('hero.title')}
               </h1>
               <p className="text-xl md:text-2xl text-primary font-medium max-w-3xl mx-auto">
-                {t('hero.subtitle')}
+                {tBooking('hero.subtitle')}
               </p>
             </div>
 
             {/* Practitioner Selection */}
             <div>
               <h2 className="text-2xl md:text-3xl font-semibold text-center text-foreground mb-8">
-                {t('selectPractitioner.title')}
+                {tBooking('selectPractitioner.title')}
               </h2>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                {doctors.map((doctor, index) => (
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                {teamMembers.map((member, index) => (
                   <motion.div
-                    key={doctor.eid}
+                    key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
                     <Card
-                      className="cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 hover:border-primary"
-                      onClick={() => handleDoctorSelect(doctor)}
+                      className="cursor-pointer hover:shadow-xl transition-all duration-300 border-border overflow-hidden flex flex-col"
+                      onClick={() => handleDoctorSelect(index, member.name)}
                     >
-                      <div className="aspect-square overflow-hidden bg-secondary">
-                        <img
-                          src={doctor.image}
-                          alt={doctor.name}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                          width="300"
-                          height="300"
-                        />
-                      </div>
-                      <CardContent className="p-4">
-                        <h3 className="text-lg font-bold text-center text-foreground">
-                          {doctor.name}
+                      <CardContent className="p-6 flex flex-col items-center text-center flex-grow">
+                        {/* Circular Avatar */}
+                        <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-primary/10">
+                          <img
+                            src={teamImages[index]}
+                            alt={member.imageAlt}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                            width="128"
+                            height="128"
+                          />
+                        </div>
+
+                        {/* Name */}
+                        <h3 className="text-xl font-bold text-foreground mb-4">
+                          {member.name}
                         </h3>
+
+                        {/* Voir Plus Button */}
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleCard(index);
+                          }}
+                          className="text-primary hover:text-primary/80 mb-4"
+                        >
+                          {tTeam('labels.viewMore')}
+                          <ChevronRight className={`w-4 h-4 ml-1 transition-transform ${expandedDoctor === index ? 'rotate-90' : ''}`} />
+                        </Button>
+
+                        {/* Expandable Content */}
+                        <AnimatePresence>
+                          {expandedDoctor === index && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="w-full text-left overflow-hidden"
+                            >
+                              {/* Experience Section */}
+                              <div className="pt-4 border-t border-border">
+                                <h4 className="text-sm font-bold text-foreground mb-3">
+                                  {tTeam('labels.experience')}
+                                </h4>
+                                <ul className="space-y-2 mb-4">
+                                  {member.experience.map((exp, expIndex) => (
+                                    <li key={expIndex} className="text-sm text-muted-foreground flex">
+                                      <span className="mr-2">•</span>
+                                      <span>{exp}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+
+                                {/* Language Flags */}
+                                <div className="flex items-center gap-1 justify-center">
+                                  {member.languageCodes.map((code, flagIndex) => (
+                                    <span key={flagIndex} className="text-2xl">
+                                      {flagEmojis[code]}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -149,10 +222,10 @@ const Booking = () => {
             <div className="mt-16 text-center max-w-3xl mx-auto">
               <div className="bg-secondary/50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {t('callPreference.title')}
+                  {tBooking('callPreference.title')}
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  {t('callPreference.description')}
+                  {tBooking('callPreference.description')}
                 </p>
                 <a
                   href="tel:+35226262046"
