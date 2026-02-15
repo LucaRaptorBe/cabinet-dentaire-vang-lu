@@ -1,0 +1,21 @@
+{
+  "redirects": [
+    { "source": "/fr/equipe-cabinet-dentaire-vang/", "destination": "/a-propos", "permanent": true },
+    { "source": "/fr/services-cabinet-dentaire-vang/", "destination": "/", "permanent": true },
+    { "source": "/en/equipe-cabinet-dentaire-vang/", "destination": "/a-propos", "permanent": true },
+    { "source": "/en/services-cabinet-dentaire-vang/", "destination": "/", "permanent": true },
+    { "source": "/en/contact-cabinet-dentaire-vang/", "destination": "/rendez-vous", "permanent": true },
+    { "source": "/services/", "destination": "/", "permanent": true },
+    { "source": "/en/services/", "destination": "/", "permanent": true },
+    { "source": "/rdv/", "destination": "/rendez-vous", "permanent": true },
+    { "source": "/contact/", "destination": "/rendez-vous", "permanent": true },
+    { "source": "/en", "destination": "/", "permanent": true },
+    { "source": "/en/", "destination": "/", "permanent": true },
+    { "source": "/category/:path*", "destination": "/", "permanent": true },
+    { "source": "/bonjour-tout-le-monde/:path*", "destination": "/", "permanent": true },
+    { "source": "/en/bonjour-tout-le-monde/:path*", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

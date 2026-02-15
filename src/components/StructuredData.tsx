@@ -6,7 +6,7 @@ const StructuredData = () => {
     "alternateName": "Cabinet Dentaire Vang Lu",
     "description": "Cabinet dentaire moderne à Limpertsberg, Luxembourg. Équipe multilingue expérimentée spécialisée en implantologie, parodontie, soins conservateurs et prothèses. 751 avis 5 étoiles.",
     "url": "https://cabinetdentairevang.lu",
-    "image": "https://cabinetdentairevang.lu/og-image.jpg",
+    "image": "https://cabinetdentairevang.lu/og-image.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "19 Avenue de la Faïencerie",

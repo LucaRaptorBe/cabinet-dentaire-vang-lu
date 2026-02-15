@@ -2,12 +2,14 @@
 User-agent: *
 Allow: /
 
+# Block old WordPress URLs
+Disallow: /*?s=
+Disallow: /*?p=
+Disallow: /category/
+Disallow: /*/feed/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+
 # Sitemaps
 Sitemap: https://cabinetdentairevang.lu/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Block access to admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
