@@ -70,7 +70,6 @@ const Contact = () => {
                     <h3 className="font-semibold text-foreground mb-2">{t('labels.hours')}</h3>
                     <div className="space-y-1 text-muted-foreground">
                       <p>{t('hours.weekdays')}</p>
-                      <p>{t('hours.saturday')}</p>
                     </div>
                   </div>
                 </div>

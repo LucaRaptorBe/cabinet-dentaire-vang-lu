@@ -2,11 +2,17 @@ const StructuredData = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Dentist",
+    "@id": "https://cabinetdentairevang.lu/#dentist",
     "name": "Cabinet Dentaire Vang",
     "alternateName": "Cabinet Dentaire Vang Lu",
     "description": "Cabinet dentaire moderne à Limpertsberg, Luxembourg. Équipe multilingue expérimentée spécialisée en implantologie, parodontie, soins conservateurs et prothèses. 751 avis 5 étoiles.",
     "url": "https://cabinetdentairevang.lu",
     "image": "https://cabinetdentairevang.lu/og-image.png",
+    "sameAs": [
+      "https://www.doctena.lu/fr/cabinet/luxembourg-limpertsberg/cabinet-dr-aurelie-vang-424575",
+      "https://www.doctena.lu/fr/specialite/dentiste/dr-aurelie-vang-453178",
+      "https://sourirelux.com/medecin-dentiste-vang-aurelie-luxembourg/"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "19 Avenue de la Faïencerie",
@@ -23,12 +29,6 @@ const StructuredData = () => {
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "09:45",
         "closes": "18:30"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:45",
-        "closes": "14:00"
       }
     ],
     "priceRange": "$$",

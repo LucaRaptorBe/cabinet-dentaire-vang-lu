@@ -167,10 +167,10 @@ Les LLMs ne fonctionnent PAS comme Google :
 
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Avenue de la Liberté",
+    "streetAddress": "19 Avenue de la Faïencerie",
     "addressLocality": "Limpertsberg",
     "addressRegion": "Luxembourg",
-    "postalCode": "1234",
+    "postalCode": "L-1510",
     "addressCountry": "LU"
   },
 

@@ -90,7 +90,6 @@ const Hero = () => {
                 <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">{t('hours.weekdays')}</p>
-                  <p className="text-sm text-muted-foreground">{t('hours.saturday')}</p>
                 </div>
               </div>
             </motion.div>

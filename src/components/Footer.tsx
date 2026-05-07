@@ -43,10 +43,6 @@ const Footer = () => {
                 <p>{t('hours.weekdays.days')}</p>
                 <p>{t('hours.weekdays.time')}</p>
               </div>
-              <div className="grid grid-cols-[5rem_auto]">
-                <p>{t('hours.saturday.days')}</p>
-                <p>{t('hours.saturday.time')}</p>
-              </div>
             </div>
           </div>
         </div>
